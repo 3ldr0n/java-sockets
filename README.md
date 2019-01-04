@@ -1,2 +1,2 @@
 # koodu
-Java web server
+Java socket server
