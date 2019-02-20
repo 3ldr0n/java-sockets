@@ -1,5 +1,3 @@
-package org.koodu;
-
 import java.io.PrintWriter;
 import java.io.IOException;
 import java.io.BufferedReader;
@@ -43,4 +41,17 @@ public class Server extends Thread {
         }
     }
 
+}
+
+class App {
+
+    public static void main(String[] args) {
+        int port = Integer.parseInt(args[0]);
+        try {
+            Thread t = new Server(port);
+            t.start();
+        } catch (IOException e) {
+            System.out.println("Port " + port + " alredy in use.");
+        }
+    }
 }
